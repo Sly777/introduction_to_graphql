@@ -1,0 +1,15 @@
+query {
+  getUser(id: 1) {
+    orders {
+      id
+      restaurant {
+        name
+        address
+      }
+      orderDetail {
+        priceTotal
+        createdAt
+      }
+    }
+  }
+}

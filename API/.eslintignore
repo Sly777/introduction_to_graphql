@@ -1,0 +1,5 @@
+**/node_modules
+**/.webpack
+**/*{.,-}min.js
+__mocks__
+**/.serverless

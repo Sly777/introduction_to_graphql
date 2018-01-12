@@ -1,0 +1,63 @@
+{
+  "name": "intro_to_graphql",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "Ilker Guller",
+    "email": "me@ilkerguller.com"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --cache .",
+    "lint:fix": "npm run lint -- --fix",
+    "invoke:local": "serverless invoke local --function",
+    "debug": "node --inspect ./node_modules/.bin/serverless offline -s dev",
+    "open:offline": "npm run lint:fix && npm run show:todos:no-error && sls offline start",
+    "show:todos": "leasot {enums,functions,handlers,libraries,config}/**/*.js",
+    "show:todos:no-error": "leasot {enums,functions,handlers,libraries,config}/**/*.js || true",
+    "deploy": "npm run lint:fix && npm run show:todos:no-error && sls deploy"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-node6": "^11.0.0",
+    "cors": "^2.8.4",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "imports-loader": "^0.7.1",
+    "leasot": "^4.12.0",
+    "prettier": "^1.8.2",
+    "serverless-offline": "^3.16.0",
+    "serverless-plugin-common-excludes": "^2.0.1",
+    "serverless-webpack": "^4.2.0",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "dependencies": {
+    "apollo-server-lambda": "1.3.2",
+    "apollo-server-module-graphiql": "^1.3.2",
+    "axios": "^0.17.1",
+    "babel-polyfill": "^6.26.0",
+    "date-fns": "^1.29.0",
+    "dialogflow": "^0.1.0",
+    "graphql": "^0.11.3",
+    "graphql-playground-middleware": "^1.1.2",
+    "graphql-playground-middleware-lambda": "^1.3.9",
+    "graphql-relay": "^0.5.4",
+    "graphql-sequelize": "^5.6.1",
+    "graphql-tools": "^2.18.0",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "pixl-xml": "^1.0.13",
+    "sequelize": "^4.31.0",
+    "sequelize-cli": "^3.1.0"
+  }
+}
